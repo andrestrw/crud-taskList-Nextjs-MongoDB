@@ -11,16 +11,15 @@ async function loadTasks() {
 async function HomePage() {
   const tasks = await loadTasks();
 
-  // JSON representation of tasks
+  //JSON representation of tasks
   // return <div>{JSON.stringify(tasks)}</div>;
-  // return (
-  //   <div className="grid grid-cols-3 gap-2">
-  //     {tasks.map((task) => (
-  //       <TaskCard task={task} key={task._id}></TaskCard>
-  //     ))}
-  //   </div>
-  // );
-  return <div></div>;
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      {tasks.map((task) => (
+        <TaskCard task={task} key={task._id}></TaskCard>
+      ))}
+    </div>
+  );
 }
 
 export default HomePage;
